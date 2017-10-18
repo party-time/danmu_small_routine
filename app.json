@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/film/film",
     "pages/index/index",
+    
     "pages/logs/logs"
   ],
   "window":{

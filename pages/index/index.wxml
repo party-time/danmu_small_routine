@@ -5,13 +5,13 @@
                 <view wx:if="{{idx==show}}" class="dialogView speech-bubble speech-bubble-left">
                     我是 我是 我是 我是 我是 我是
                 </view>
-                <image class="imageCss" src="{{items.url}}"/>
+                <image class="imageCss" src="{{items.url}}" />
             </view>
 	    </view>
 	</view>
 	<view class="imageView2">
 		<view>
-			<image class="imageCss2" src="{{personalObject.url}}"/>
+			<image class="imageCss2" src="{{personalObject.url}}" bindtap="pageAction"/>
 		</view>
 	</view>  
 	
@@ -20,17 +20,17 @@
           <view class="titleOtherViewList" wx:for="{{titleList}}" wx:for-item="item" wx:for-index="idx" >
               
               <view class="titleOtherViewLeft" wx:if="{{idx==0}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}"/>
+                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
                   <text  class="titleName">{{item.name}}</text>
               </view>
 
               <view class="titleOtherView" wx:if="{{idx!=0 && idx!=3}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}"/>
+                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
                   <text  class="titleName">{{item.name}}</text>
               </view>
 
               <view class="titleOtherViewRight" wx:if="{{idx==3}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}"/>
+                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
                   <text  class="titleName">{{item.name}}</text>
               </view>
           </view> 
@@ -62,7 +62,7 @@
 		</view>
     <view class='filmListView'>
       <scroll-view scroll-x="true" class='scrollView' scroll-with-animation="true">
-          <view class="filmPictureView"  wx:for="{{songsList}}" bindtap="play" data-num="{{index}}">
+          <view class="filmPictureView"  wx:for="{{filmList}}" bindtap="play" data-num="{{index}}">
             <image class="filmPicture" src="{{item.coverImgUrl}}"></image>
           </view>
       </scroll-view>

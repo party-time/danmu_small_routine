@@ -1,24 +1,27 @@
 const app = getApp();
 
+var navigateToObject = require('../../utils/navigate.js')
+
 var _titleList = [
     {
         name:"文章",
+        page:'article',
         coverImgUrl: "../../image/article.gif"
     },{
         name:"电影",
+        page: 'film',
         coverImgUrl: "../../image/film.gif"
     },{
         name:"弹幕",
+        page: 'danmu',
         coverImgUrl: "../../image/danmu.png"
     }, {
       name: "游戏",
+      page:'game',
       coverImgUrl: "../../image/game.gif"
-    }/*,{
-        name:"我",
-        coverImgUrl: "../../image/my.gif"
-    }*/
+    }
 ]
-var _songsList=[{
+var _filmList=[{
     dataUrl:'http://stream.qqmusic.tc.qq.com/137192078.mp3',
     name: '告白气球',
     mid: "003OUlho2HcRHC",
@@ -98,9 +101,14 @@ Page({
         gameObject: {
           name: '游戏'
         },
-        songsList:_songsList,
+        filmList: _filmList,
         titleList:_titleList,
-		gameList:_gameList
+		    gameList:_gameList
+    },
+    navigateTo:function(event){
+        var page = event.currentTarget.dataset.page;
+        console.log(page);
+        navigateToObject.navigateToPage(page)
     },
     onLoad: function () {
         var numberArray = [];
