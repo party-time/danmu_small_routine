@@ -1,0 +1,85 @@
+.filmcontainer {
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+
+.filmViewList {
+}
+
+.filmViewList .filmScrollView{
+    
+    height: 100%;
+}
+
+.filmViewList .filmView{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+    background-color: lightgray;
+}
+.filmViewList .filmView .filmDetailList{
+    margin-left:30rpx;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+.filmViewList .filmView .filmDetail{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.filmViewList .filmView .filmDetail .filmDetailLabel{
+    width: 120rpx;
+    font-size: 10pt;
+    text-align: right;
+}
+
+.filmViewList .filmView .filmDetail .filmDetailContent{
+    width: 200rpx;
+    margin-left:10rpx;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.filmViewList .filmView .picture{
+    background-size: 100%; 
+    width:200rpx;
+    height: 200rpx;
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png')
+}
+
+
+/*.filmListView .filmListViewList{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.filmListView .filmListViewList .filmListViewLitItem{
+    width:100%;
+    height: 200rpx;
+    display:flex;
+    flex-direction:row;
+    margin-bottom: 10rpx;
+}
+
+.filmListView .filmListViewList .filmListViewLitItem .filmPicture{
+    background-size: 100%;
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');  
+    width:200rpx;
+    height: 200rpx;
+}
+
+.filmListView .filmListViewList .filmListViewLitItem .filmName{
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}*/

@@ -1,0 +1,36 @@
+<view class="filmcontainer">
+  <view class='filmViewList'>
+      <scroll-view scroll-y="true" style="filmScrollView">
+        <view class="filmView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="idx" >
+            <view class='picture'>
+            </view>
+            <view class="filmDetailList">
+                <view class='filmDetail'>
+                  <view class='filmDetailLabel'>
+                    <text decode="{{true}}">电影名称:</text>
+                  </view>
+                  <view class='filmDetailContent'>
+                    <text decode="{{true}}">{{film.name}}</text>
+                  </view>
+                </view>
+                <view class='filmDetail'>
+                  <view class='filmDetailLabel'>
+                    <text decode="{{true}}">观影人数:</text>
+                  </view>
+                  <view class='filmDetailContent'>
+                    <text decode="{{true}}">{{film.people}}</text>
+                  </view>
+                </view>
+                <view class='filmDetail'>
+                  <view class='filmDetailLabel'>
+                    <text decode="{{true}}">弹幕数量:</text>
+                  </view>
+                  <view class='filmDetailContent'>
+                    <text decode="{{true}}">{{film.danmu}}</text>
+                  </view>
+                </view>
+            </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>
