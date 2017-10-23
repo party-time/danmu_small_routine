@@ -1,36 +1,43 @@
 <view class="filmcontainer">
   <view class='filmViewList'>
-      <scroll-view scroll-y="true" style="filmScrollView">
-        <view class="filmView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="idx" >
-            <view class='picture'>
-            </view>
-            <view class="filmDetailList">
-                <view class='filmDetail'>
-                  <view class='filmDetailLabel'>
-                    <text decode="{{true}}">电影名称:</text>
-                  </view>
-                  <view class='filmDetailContent'>
-                    <text decode="{{true}}">{{film.name}}</text>
-                  </view>
-                </view>
-                <view class='filmDetail'>
-                  <view class='filmDetailLabel'>
-                    <text decode="{{true}}">观影人数:</text>
-                  </view>
-                  <view class='filmDetailContent'>
-                    <text decode="{{true}}">{{film.people}}</text>
-                  </view>
-                </view>
-                <view class='filmDetail'>
-                  <view class='filmDetailLabel'>
-                    <text decode="{{true}}">弹幕数量:</text>
-                  </view>
-                  <view class='filmDetailContent'>
-                    <text decode="{{true}}">{{film.danmu}}</text>
-                  </view>
-                </view>
-            </view>
+    <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="400">
+      <view class="filmView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="idx">
+        <view class='picture'>
         </view>
-      </scroll-view>
+        <view class="filmDetailList">
+          <view class='filmDetail'>
+            <view class='filmDetailLabel'>
+              <text decode="{{true}}">电影名称:</text>
+            </view>
+            <view class='filmDetailContent'>
+              <text decode="{{true}}">{{film.name}}</text>
+            </view>
+          </view>
+          <view class='filmDetail'>
+            <view class='filmDetailLabel'>
+              <text decode="{{true}}">观影人数:</text>
+            </view>
+            <view class='filmDetailContent'>
+              <text decode="{{true}}">{{film.people}}</text>
+            </view>
+          </view>
+          <view class='filmDetail'>
+            <view class='filmDetailLabel'>
+              <text decode="{{true}}">弹幕数量:</text>
+            </view>
+            <view class='filmDetailContent'>
+              <text decode="{{true}}">{{film.danmu }}</text>
+            </view>
+          </view>
+        </view>
+        <view class='scoreView'>
+          <view class='scoreConteView'>
+            90
+          </view>
+        </view>
+      </view>
+
+    </scroll-view>
+
   </view>
 </view>

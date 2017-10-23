@@ -1,0 +1,18 @@
+<view class="filmcontainer">
+  <view class='filmViewList'>
+    <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll" scroll-top="400">
+      <view class="filmView" wx:for="{{articleList}}" wx:for-item="film" wx:for-index="idx">
+        
+        <view class="filmDetailList">
+          <view class='filmDetail'>
+            <view class='filmDetailContent'>
+              <text decode="{{true}}">{{film.name}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='picture'>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

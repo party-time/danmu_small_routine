@@ -1,3 +1,4 @@
+/* pages/game/game.wxss */
 .filmcontainer {
     padding-left: 20rpx;
     padding-right: 20rpx;
@@ -6,9 +7,8 @@
 .filmViewList {
 }
 
-.filmViewList .filmScrollView{
+.filmScrollView {
     
-    height: 100%;
 }
 
 .filmViewList .filmView{
@@ -17,13 +17,44 @@
     margin-bottom: 20rpx;
     background-color: lightgray;
 }
+
+.filmViewList .filmView .picture{
+    background-size: 100%; 
+    width:200rpx;
+    height: 200rpx;
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png')
+}
+
+.filmViewList .filmView .scoreView {
+    margin-left:20rpx;
+    display:flex; 
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    box-sizing: border-box;
+    
+  }
+
+  .filmViewList .filmView .scoreView .scoreConteView{
+      width:80rpx;
+      height:80rpx;
+      border-radius: 50%;
+      background-color: yellow;
+      display:flex; 
+      flex-direction:column;
+      align-items: center;
+      justify-content:center;
+      box-sizing: border-box;
+  }
+
 .filmViewList .filmView .filmDetailList{
-    margin-left:30rpx;
+    margin-left:20rpx;
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;
     justify-content:flex-start;
 }
+
 .filmViewList .filmView .filmDetail{
     margin-top: 20rpx;
     display:flex;
@@ -33,9 +64,17 @@
 }
 
 .filmViewList .filmView .filmDetail .filmDetailLabel{
-    width: 120rpx;
-    font-size: 10pt;
+    width: 150rpx;
+    font-size:8pt;
     text-align: right;
+}
+
+.filmViewList .filmView .filmDetail .filmNameDetailContent{
+    width: 200rpx;
+    margin-left:10rpx;
+    font-size: 12pt;
+    text-align: left;
+    font-weight:bold;
 }
 
 .filmViewList .filmView .filmDetail .filmDetailContent{
@@ -43,13 +82,7 @@
     margin-left:10rpx;
     font-size: 10pt;
     text-align: left;
-}
-
-.filmViewList .filmView .picture{
-    background-size: 100%; 
-    width:200rpx;
-    height: 200rpx;
-    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png')
+    font-weight:bold;
 }
 
 
@@ -82,4 +115,4 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}*/
+}
