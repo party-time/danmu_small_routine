@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/user/user",
     "pages/article/article",
+    
     "pages/film/film",
     "pages/game/game",
     "pages/logs/logs"
@@ -9,7 +11,10 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTitleText": "聚时代",
+    "backgroundColor": "#000000",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": false
+  },
+  "debug": true
 }

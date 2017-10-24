@@ -1,7 +1,7 @@
 <view class="container">
 	<view class="imageContent">
 	    <view class="imageView">
-	        <view class="imageViewList" wx:for="{{imageObjectList}}" wx:for-item="items" wx:for-index="idx" >
+	        <view class="imageViewList" wx:for="{{imageObjectList}}" wx:for-item="items" wx:for-index="idx" wx:key="unique">
                 <view wx:if="{{idx==show}}" class="dialogView speech-bubble speech-bubble-left">
                     我是 我是 我是 我是 我是 我是
                 </view>
@@ -9,15 +9,16 @@
             </view>
 	    </view>
 	</view>
-	<view class="imageView2">
+	<view class="imageView2" >
 		<view>
-			<image class="imageCss2" src="{{personalObject.url}}" bindtap="pageAction"/>
+			<image wx:if="{{hasUserInfo}}"  class="imageCss2" src="{{userInfo.avatarUrl}}" bindtap="pageAction"/>
+      <image wx:if="{{!hasUserInfo}}"  class="imageCss2" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4230113324,325347854&fm=27&gp=0.jpg" bindtap="pageAction"/>
 		</view>
 	</view>  
 	
   <view class="titleContent">
 	    <view class="titleView">
-          <view class="titleOtherViewList" wx:for="{{titleList}}" wx:for-item="item" wx:for-index="idx" >
+          <view class="titleOtherViewList" wx:for="{{titleList}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
               
               <view class="titleOtherViewLeft" wx:if="{{idx==0}}">
                   <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
@@ -36,7 +37,7 @@
           </view> 
 	    </view>
       <view class='titleUserView'>
-          <view class="titleUserViewContent">
+          <view class="titleUserViewContent" bindtap="showMySelf">
               <image class="titleImage" src="../../image/my.gif"/>
               <text  class="titleName">我</text>
           </view>
@@ -49,7 +50,7 @@
           <text class="tileText">{{gameObject.name}}</text>
       </view>
       <view class="gameListView">
-            <view  class="big-photo-item"  wx:for="{{gameList}}" bindtap="play" data-num="{{index}}">
+            <view  class="big-photo-item"  wx:for="{{gameList}}" bindtap="play" data-num="{{index}}" wx:key="unique">
                 <image class="photo" src="{{item.coverImgUrl}}"></image>
                 <text class="gameName">{{item.name}}</text>
             </view>
@@ -62,7 +63,7 @@
 		</view>
     <view class='filmListView'>
       <scroll-view scroll-x="true" class='scrollView' scroll-with-animation="true">
-          <view class="filmPictureView"  wx:for="{{filmList}}" bindtap="play" data-num="{{index}}">
+          <view class="filmPictureView"  wx:for="{{filmList}}" bindtap="play" data-num="{{index}}" wx:key="unique">
             <image class="filmPicture" src="{{item.coverImgUrl}}"></image>
           </view>
       </scroll-view>

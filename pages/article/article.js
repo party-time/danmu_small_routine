@@ -1,7 +1,7 @@
 // pages/game/game.js
 const app = getApp();
 var _articleList = [{
-  name: '告白气球',
+  name: '告白气球sdfsfsdfsdfsdfsdfsdfsdjfsjldflskdjfksdlkfsdljk',
   coverImgUrl: '../../image/dxx.png',
   people: 30,
   danmu: 50
