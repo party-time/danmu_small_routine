@@ -20,18 +20,18 @@
 	    <view class="titleView">
           <view class="titleOtherViewList" wx:for="{{titleList}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
               
-              <view class="titleOtherViewLeft" wx:if="{{idx==0}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
+              <view class="titleOtherViewLeft" wx:if="{{idx==0}}" data-page="{{item.page}}" bindtap="navigateTo">
+                  <image class="titleImage" src="{{item.coverImgUrl}}" />
                   <text  class="titleName">{{item.name}}</text>
               </view>
 
-              <view class="titleOtherView" wx:if="{{idx!=0 && idx!=3}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
+              <view class="titleOtherView" wx:if="{{idx!=0 && idx!=3}}" data-page="{{item.page}}" bindtap="navigateTo">
+                  <image class="titleImage" src="{{item.coverImgUrl}}"/>
                   <text  class="titleName">{{item.name}}</text>
               </view>
 
-              <view class="titleOtherViewRight" wx:if="{{idx==3}}">
-                  <image class="titleImage" src="{{item.coverImgUrl}}" data-page="{{item.page}}" bindtap="navigateTo"/>
+              <view class="titleOtherViewRight" wx:if="{{idx==3}}" data-page="{{item.page}}" bindtap="navigateTo">
+                  <image class="titleImage" src="{{item.coverImgUrl}}" />
                   <text  class="titleName">{{item.name}}</text>
               </view>
           </view> 

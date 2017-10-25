@@ -1,6 +1,6 @@
 <view class="filmcontainer">
   <view class='filmViewList'>
-    <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="400">
+    <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll" scroll-into-view="{{toView}}">
       <view class="filmView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="idx">
         <view class='picture'>
         </view>
