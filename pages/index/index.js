@@ -124,35 +124,20 @@ Page({
     wx.getUserInfo({
       success: res => {
           console.log('success')
-          wx.showModal({
-            title: '是',
-            content: '这是一个模态弹窗',
-            success: function (res) {
-              if (res.confirm) {
-                //console.log('用户点击确定')
-                wx.openSetting({
-                  success: function (res) {
-                    console.log(res)
-                    console.log('showMySelf============success')
-
-                  }
-                })
-              }
-            }
-          })
+          var page = event.currentTarget.dataset.page;
+          console.log(page);
+          navigateToObject.navigateToPage(page)
       }, fail: res =>{
         console.log('fail')
         wx.showModal({
           title: '是',
-          content: '这是一个模态弹窗',
+          content: '需要获取您的公开信息(昵称、头像等)，请到小程序的设置中打开用户信息授权',
           success: function (res) {
             if (res.confirm) {
               //console.log('用户点击确定')
               wx.openSetting({
                 success: function (res) {
                   console.log(res)
-                  console.log('showMySelf============success')
-
                 }
               })
             }
@@ -160,22 +145,6 @@ Page({
         })
       }
     });
-    /*wx.openSetting({
-      success: function (res) {
-        console.log(res)
-        console.log('showMySelf============success')
-
-      }
-    })
-    wx.showModal({
-      title: '提示',
-      content: '这是一个模态弹窗',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        }
-      }
-    })*/
   },
   navigateTo: function (event) {
     var page = event.currentTarget.dataset.page;

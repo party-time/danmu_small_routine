@@ -2,19 +2,18 @@
   "pages":[
     "pages/index/index",
     "pages/user/user",
-    "pages/article/article",
-    
-    "pages/film/film",
     "pages/game/game",
+    "pages/article/article",
+    "pages/film/film",
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "聚时代",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "EnterX",
     "backgroundColor": "#000000",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle":"white",
     "enablePullDownRefresh": false
   },
   "debug": true
+
 }

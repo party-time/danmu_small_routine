@@ -36,8 +36,8 @@
               </view>
           </view> 
 	    </view>
-      <view class='titleUserView'>
-          <view class="titleUserViewContent" bindtap="showMySelf">
+      <view class='titleUserView' bindtap="showMySelf" data-page="user">
+          <view class="titleUserViewContent">
               <image class="titleImage" src="../../image/my.gif"/>
               <text  class="titleName">我</text>
           </view>
