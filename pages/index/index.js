@@ -194,6 +194,19 @@ Page({
     });
   },
   onLoad: function (e) {
+
+    wx.playBackgroundAudio({
+      dataUrl: 'http://sc1.111ttt.com/2017/4/05/10/298101104389.mp3',
+      success :function(res){
+
+      },fail:function(res){
+
+      },complete:function(res){
+        
+      }
+
+    })
+
     console.log('==============>onload')
     if (app.globalData.userInfo) {
       this.setData({

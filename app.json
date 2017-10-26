@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index"  
+    "pages/game/game"  
   ],
   "window":{
     "navigationBarBackgroundColor": "black",
