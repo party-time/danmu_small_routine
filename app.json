@@ -1,11 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/user/user",
-    "pages/game/game",
-    "pages/article/article",
-    "pages/film/film",
-    "pages/logs/logs"
+    "pages/index/index"  
   ],
   "window":{
     "navigationBarBackgroundColor": "black",
