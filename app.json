@@ -1,6 +1,11 @@
 {
   "pages":[
-    "pages/game/game"  
+    "pages/index/index",
+    "pages/user/user",
+    "pages/game/game",
+    "pages/article/article",
+    "pages/film/film",
+    "pages/logs/logs"
   ],
   "window":{
     "navigationBarBackgroundColor": "black",
@@ -10,5 +15,4 @@
     "enablePullDownRefresh": false
   },
   "debug": true
-
 }
