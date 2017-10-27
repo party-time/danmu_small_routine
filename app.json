@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/danmu/danmu",
     "pages/index/index",
     "pages/user/user",
     "pages/game/game",

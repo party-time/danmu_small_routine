@@ -1,0 +1,21 @@
+<view class="body">
+  <view class="nav bc_white">
+    <view class="{{selected?'red':'default'}}；" style='border-bottom: 0.5rpx solid lightgray;' bindtap="selected">个人弹幕</view>
+    <view class="{{selected1?'red':'default'}}" style='border-bottom: 0.5rpx solid lightgray;'bindtap="selected1">所有弹幕</view>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+      <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll">
+      <view class="filmView" wx:for="{{articleList}}" wx:for-item="film" wx:for-index="idx">
+        
+        <view class='filmTitleContent'>
+              {{film.name}}
+        </view>
+        <view class='picture'></view>
+        <view class='filmDetailContent'>
+              <text decode="{{true}}">{{film.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="{{selected1?'show':'hidden'}}">for activity</view>
+</view>
