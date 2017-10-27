@@ -1,0 +1,10 @@
+<view class="gameCon">
+  <view>
+      <text>音乐播放</text>
+  </view>
+
+
+  <button bindtap="start">START</button>
+  <button bindtap="pause">PAUSE</button>
+    
+</view>

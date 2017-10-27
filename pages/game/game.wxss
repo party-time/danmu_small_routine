@@ -1,0 +1,5 @@
+/* pages/game/game.wxss */
+
+.modelContent{
+  font-size: 10pt;
+}
