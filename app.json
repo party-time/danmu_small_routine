@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/danmu/danmu",
+    "pages/film/film",
     "pages/index/index",
+    "pages/danmu/danmu",
     "pages/user/user",
     "pages/game/game",
     "pages/article/article",
-    "pages/film/film",
     "pages/logs/logs"
   ],
   "window":{

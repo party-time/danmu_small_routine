@@ -14,7 +14,7 @@
 .filmViewList .filmView{
     display:flex;
     flex-direction: row;
-    margin-bottom: 20rpx;
+    margin-top: 20rpx;
     background-color: lightgray;
 }
 

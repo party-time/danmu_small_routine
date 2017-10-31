@@ -1,5 +1,7 @@
 // pages/game/game.js
 var pages = getCurrentPages();
+var navigateToObject = require('../../utils/navigate.js');
+
 var _filmList = [{
   name: '告白气球',
   coverImgUrl: '../../image/dxx.png',
@@ -43,7 +45,14 @@ Page({
    */
   data: {
     filmList: _filmList,
-  }, upper: function (e) {
+  }, 
+  navigateTo:function(event){
+    var page = event.currentTarget.dataset.page;
+    var filmid = event.currentTarget.dataset.filmid;
+    console.log(page);
+    navigateToObject.navigateToPageWithParam(page, [{ name: 'filmid', data: filmid}]);
+  },
+  upper: function (e) {
     console.log(e)
   },
   lower: function (e) {

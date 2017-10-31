@@ -120,14 +120,14 @@ Page({
     titleList: _titleList,
     gameList: _gameList
   },
-  showMySelf:function(event) {
+  showMySelf: function (event) {
     wx.getUserInfo({
       success: res => {
-          console.log('success')
-          var page = event.currentTarget.dataset.page;
-          console.log(page);
-          navigateToObject.navigateToPage(page)
-      }, fail: res =>{
+        console.log('success')
+        var page = event.currentTarget.dataset.page;
+        console.log(page);
+        navigateToObject.navigateToPage(page)
+      }, fail: res => {
         console.log('fail')
         wx.showModal({
           title: '是',
@@ -166,8 +166,8 @@ Page({
               if (app.userInfoReadyCallback) {
                 app.userInfoReadyCallback(res)
               }
-            },fail:res => {
-               console.log('fail');
+            }, fail: res => {
+              console.log('fail');
             }
           });
         }
@@ -197,12 +197,12 @@ Page({
 
     wx.playBackgroundAudio({
       dataUrl: 'http://sc1.111ttt.com/2017/4/05/10/298101104389.mp3',
-      success :function(res){
+      success: function (res) {
 
-      },fail:function(res){
+      }, fail: function (res) {
 
-      },complete:function(res){
-        
+      }, complete: function (res) {
+
       }
 
     })

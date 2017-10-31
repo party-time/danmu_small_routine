@@ -1,21 +1,41 @@
 <view class="body">
   <view class="nav bc_white">
-    <view class="{{selected?'red':'default'}}；" style='border-bottom: 0.5rpx solid lightgray;' bindtap="selected">个人弹幕</view>
-    <view class="{{selected1?'red':'default'}}" style='border-bottom: 0.5rpx solid lightgray;'bindtap="selected1">所有弹幕</view>
+      <view class="{{selected?'select':'default'}}；"  bindtap="selected" data-type="one">个人弹幕</view>
+      <view class="{{selected?'default':'select'}}"   bindtap="selected" data-type="all">所有弹幕</view>
   </view>
-  <view class="{{selected?'show':'hidden'}}">
-      <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll">
-      <view class="filmView" wx:for="{{articleList}}" wx:for-item="film" wx:for-index="idx">
-        
-        <view class='filmTitleContent'>
-              {{film.name}}
-        </view>
-        <view class='picture'></view>
-        <view class='filmDetailContent'>
-              <text decode="{{true}}">{{film.name}}</text>
-        </view>
+  <view wx:if="{{selected}}" class='content'>
+       <scroll-view scroll-y style="height: 1500rpx;" scroll-with-animation="true">
+          <view class="danmuView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="index">
+              <view class='danmuFilmView'>
+                  
+                  <!--
+                  <label class='danmuFilmViewLabel'>
+                      电影名称:
+                  </label>
+                  -->
+                  <view class='danmuFilmViewName'>
+                    {{film.name}}
+                  </view>
+              </view>
+              <view class='danmuListView'>
+                  <view class='danmuContentView' wx:for="{{film.danmuList}}" wx:for-item="danmu" wx:for-index="dIndex">
+                        <text>{{dIndex+1}}.{{danmu}}</text>
+                  </view>
+              </view>
+              
+          </view>
+       </scroll-view>
+  </view>
+
+  <view wx:if="{{!selected}}" class='content'>
+    <view class="group" wx:for="{{groups}}"  wx:for-index="groupindex">
+      <!--cell-->
+      <view class="group-cell" wx:for="{{groups[groupindex]}}" wx:for-item="cell" wx:for-index="cellindex">
+        <!--<image class='group-cell-image' src="{{item.cover}}"></image>-->
+        <image class='group-cell-image' src="../../img/mineBG.png"></image>
+        <view class='group-cell-title'>title{{cell.title}}</view>
       </view>
-    </scroll-view>
+    </view>
   </view>
-  <view class="{{selected1?'show':'hidden'}}">for activity</view>
+
 </view>
