@@ -4,25 +4,135 @@
     padding-right: 20rpx;
 }
 
-.filmViewList {
-}
-
-.filmScrollView {
-    
-}
-
-.filmViewList .filmView{
+.filmListView .filmView{
     display:flex;
     flex-direction: row;
-    margin-top: 20rpx;
-    background-color: lightgray;
+    background-color: white;
+    border-top: 0.5rpx solid lightgray;
 }
 
-.filmViewList .filmView .picture{
+.filmListView .filmView .filmPicture{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
     background-size: 100%; 
-    width:200rpx;
+    width: 20%;
     height: 200rpx;
-    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png')
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
+  
+}
+
+.filmListView .filmView .filmContentView{
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.filmListView .filmView .filmContentView .filmDetailView{
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 8rpx;
+}
+
+.filmListView .filmView .filmContentView .filmDetailView .filmNameView{
+    font-size: 12pt;
+}
+
+.filmListView .filmView .filmContentView .filmDetailView .filmTypeView{
+     font-size: 13px;
+     color: gray;
+     line-height: 50rpx;
+     font-family: "宋体";
+}
+.filmListView .filmView .filmContentView .filmDetailView .filmDataView{
+    font-size: 9pt;
+    display:flex;
+    flex-direction: row;
+    line-height: 50rpx;
+
+}
+
+.filmListView .filmView .filmContentView .filmDetailView .filmDataView .filmDataDetailView{
+    display:flex;
+    flex-direction: row; 
+    color: gray;
+    margin-right: 10rpx;
+}
+
+.filmListView .filmView .filmContentView .filmScoreView{
+    width: 25%;
+    display:flex;
+    flex-direction: column;
+    color: orange;
+    justify-content:flex-start;
+}
+
+.filmListView .filmView .filmContentView .filmScoreView .filmScoreTextView{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+
+.filmListView .filmView .filmContentView .filmScoreView .filmScoreTextValueView{
+    font-size: 12pt;
+    line-height: 60rpx;  
+}
+
+.filmListView .filmView .filmContentView .filmScoreView .filmScoreTextLabelView{
+    font-size: 8pt;
+    line-height: 60rpx;  
+}
+
+.filmListView .filmView .filmContentView .filmScoreView .screenshotButton{
+
+    margin-top: 30rpx;
+    width: 100rpx;
+    height: 60rpx;
+    color: white;
+    border-radius:2px;
+    background-color: rgb(246, 63, 56);
+    display:flex;
+    font-size: 9pt;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+
+/*.filmViewList .filmView .filmDetailList{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.filmViewList .filmView .filmDetail{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction:row;
+}
+
+.filmViewList .filmView .filmDetail .filmDetailLabel{
+    width: 150rpx;
+    font-size:8pt;
+    text-align: right;
+}
+
+.filmViewList .filmView .filmDetail .filmNameDetailContent{
+    width: 200rpx;
+    margin-left:10rpx;
+    font-size: 12pt;
+    text-align: left;
+}
+
+.filmViewList .filmView .filmDetail .filmDetailContent{
+    margin-left:10rpx;
+    font-size: 11pt;
+    text-align: left;
 }
 
 .filmViewList .filmView .scoreView {
@@ -45,42 +155,4 @@
       align-items: center;
       justify-content:center;
       box-sizing: border-box;
-  }
-
-.filmViewList .filmView .filmDetailList{
-    margin-left:20rpx;
-    display:flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    justify-content:flex-start;
-}
-
-.filmViewList .filmView .filmDetail{
-    margin-top: 20rpx;
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content:flex-start;
-}
-
-.filmViewList .filmView .filmDetail .filmDetailLabel{
-    width: 150rpx;
-    font-size:8pt;
-    text-align: right;
-}
-
-.filmViewList .filmView .filmDetail .filmNameDetailContent{
-    width: 200rpx;
-    margin-left:10rpx;
-    font-size: 12pt;
-    text-align: left;
-    font-weight:bold;
-}
-
-.filmViewList .filmView .filmDetail .filmDetailContent{
-    width: 200rpx;
-    margin-left:10rpx;
-    font-size: 10pt;
-    text-align: left;
-    font-weight:bold;
-}
+  }*/

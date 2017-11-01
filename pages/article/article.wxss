@@ -20,13 +20,15 @@
     padding-left: 20rpx;
     padding-right: 20rpx;
     padding-top: 20rpx;
+      background-size: 100%; 
+    background-image: url('https://mmbiz.qpic.cn/mmbiz_jpg/S8N2Iz9U1IMbCj1vECdTdTzapp9lgzbS6mAR7EzI2xIpbkiaRT2omqglIcj01odT4IJiazlVJmuGKEhy6CucKO3Q/0?wx_fmt=jpeg');
 }
 
 .filmViewList .filmView .picture{
-    background-size: 100%; 
+  
     width: 100%;
     height: 370rpx;
-    background-image: url('https://mmbiz.qpic.cn/mmbiz_jpg/S8N2Iz9U1IMbCj1vECdTdTzapp9lgzbS6mAR7EzI2xIpbkiaRT2omqglIcj01odT4IJiazlVJmuGKEhy6CucKO3Q/0?wx_fmt=jpeg');
+    
     margin-top: 20rpx;
 }
 

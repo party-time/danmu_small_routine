@@ -1,8 +1,12 @@
 {
   "pages":[
-    "pages/film/film",
-    "pages/index/index",
+
     "pages/danmu/danmu",
+    "pages/film/film",
+    
+    
+    "pages/index/index",
+    
     "pages/user/user",
     "pages/game/game",
     "pages/article/article",

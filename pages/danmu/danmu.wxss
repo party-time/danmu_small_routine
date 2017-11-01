@@ -1,99 +1,142 @@
 page {
-    background-color: #edf0f3;
-    font-size: 9pt;
-    font-family: Arial, Helvetica, sans-serif;
+  /*background-size: 100%; 
+  background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');*/
 }
 
-.nav {
+.danmuContainer .filmContainerTemp{
+    height: 350rpx;
     width: 100%;
-    height: 100rpx;
-    display: flex;
+    position: absolute;
+    background-size: 150%;
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);    
+    filter: blur(10px);
+}
+
+.danmuContainer .filmContainer{
+    background:rgba(0,0,0,0.0) no-repeat center fixed; 
+    position: absolute;
+    width: 100%;
+    height: 350rpx;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-left: 20rpx;
+    border-bottom: 1rpx solid gray;
+    display:flex;
     flex-direction: row;
-    position: fixed; top: 0;
-    z-index: 1000;
 }
 
-.default {
-    line-height: 100rpx;
-    text-align: center;
-    flex: 1;
-    border-right: 1px solid gainsboro;
-    color: #000;
-    font-weight: bold;
-    border-bottom: 0.5rpx solid lightgray;
-}
-
-.select {
-    line-height: 100rpx;
-    text-align: center;
-    color: #fc5558;
-    flex: 1;
-    border-right: 1px solid gainsboro;
-    font-weight: bold;
-    border-bottom: 0.5rpx solid lightgray;
-}
-
-.content{
-  margin-top: 100rpx;
-}
-
-.danmuView {
-    display: flex;
+.danmuContainer .filmContainer .filmPictureView{
+    width:30%;
+    display:flex;
     flex-direction: column;
-    margin-bottom: 10rpx;
+    justify-content: center;
 }
-.danmuView .danmuFilmView {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
+.danmuContainer .filmContainer .filmPictureView .filmPicture{
+    background-size: 100%; 
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
+    width: 100%;
+    height: 300rpx;
+    border: 1rpx solid lightcyan;
+}
+
+.danmuContainer .filmContainer .filmDetailView{
+    width: 70%;
     padding-left: 20rpx;
-    padding-right: 20rpx;
+    display:flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    padding-top: 20rpx;
 
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    -webkit-box-shadow: #666 0px 0px 10px;
-    -moz-box-shadow: #666 0px 0px 10px;
-    box-shadow: #666 0px 0px 10px;
-    background: #EEFF99;
-    behavior: url(/PIE.htc);
 }
 
-.danmuView .danmuFilmView .danmuFilmViewLabel{
-    line-height: 70rpx;
+.danmuContainer .filmContainer .filmDetailView .filmTitleView{
+    font-size: 12pt;
+    color:white;
+    line-height: 60rpx;
+    font-weight: bold;
 }
 
-.danmuView .danmuFilmView .danmuFilmViewName{
-    line-height: 70rpx;
-    font-size: 15pt;
+.danmuContainer .filmContainer .filmDetailView .filmTypeView{
+    font-size: 9pt;
+    color:white;
+    line-height: 60rpx;
+    font-weight: bold;
 }
 
-.danmuView .danmuListView {
-    padding-top: 15rpx;
-    padding-left: 20rpx;
-    padding-right: 20rpx;
-}
-
-.danmuView .danmuListView .danmuContentView{
-    display: flex;
+.danmuContainer .filmContainer .filmDetailView .filmDataView{
+     font-size: 9pt;
+    display:flex;
     flex-direction: row;
-    margin-bottom: 15rpx;
+    line-height: 60rpx;
 }
 
+.danmuContainer .filmContainer .filmDetailView .filmDataView .filmDataDetailView{
+    display:flex;
+    flex-direction: row; 
+    color: white;
+    margin-right: 10rpx;
+}
 
+/*.firstView{
+     background:rgba(0,0,0,0.2) no-repeat center fixed; 
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-
-
-/*
-.show {
-  display: block;
+.filmView {
   text-align: center;
-  line-height: 200rpx;
+  height: 203px;
+  width: 100%;
+  position: absolute;
+  background-size: 200%; 
+  background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: blur(10px); /* Chrome, Opera 
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);    
+  filter: blur(10px);
 }
-
-.hidden {
-  display: none;
-  text-align: center;
-  line-height: 200px;
+.filmView .del_tip_word {
+  position: inherit;
+  top: 45%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -35px;
+  color: #fff;
 }
-*/
+.filmView .del_tip_word p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.filmView .del_tip_word .sure {
+  width: 50px;
+  height: 25px;
+  background: #ff4040;
+  padding: 5px 10px;
+  margin-left: -19px;
+  cursor: pointer;
+}
+.filmView .del_tip_word .cancle {
+  width: 50px;
+  height: 25px;
+  background: #bbb;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}*/

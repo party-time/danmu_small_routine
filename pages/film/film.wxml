@@ -1,42 +1,59 @@
 <view class="filmcontainer">
-  <view class='filmViewList'>
-    <scroll-view scroll-y style="height: 1500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" scroll-with-animation="true" bindscroll="scroll" scroll-into-view="{{toView}}">
-      <view class="filmView" wx:for="{{filmList}}" wx:for-item="film" wx:for-index="idx" data-page="danmu" bindtap="navigateTo" data-filmid="dddddd">
-        <view class='picture'>
-        </view>
-        <view class="filmDetailList">
-          <view class='filmDetail'>
-            <view class='filmDetailLabel'>
-              <text decode="{{true}}">电影名称:</text>
-            </view>
-            <view class='filmDetailContent'>
-              <text decode="{{true}}">{{film.name}}</text>
-            </view>
-          </view>
-          <view class='filmDetail'>
-            <view class='filmDetailLabel'>
-              <text decode="{{true}}">观影人数:</text>
-            </view>
-            <view class='filmDetailContent'>
-              <text decode="{{true}}">{{film.people}}</text>
-            </view>
-          </view>
-          <view class='filmDetail'>
-            <view class='filmDetailLabel'>
-              <text decode="{{true}}">弹幕数量:</text>
-            </view>
-            <view class='filmDetailContent'>
-              <text decode="{{true}}">{{film.danmu }}</text>
-            </view>
-          </view>
-        </view>
-        <view class='scoreView'>
-          <view class='scoreConteView'>
-            90
-          </view>
-        </view>
-      </view>
+  <view class='filmListView'>
+    <scroll-view  scroll-y 
+                  style="height: 1500rpx;" 
+                  bindscrolltoupper="upper" 
+                  bindscrolltolower="lower" 
+                  scroll-with-animation="true" 
+                  bindscroll="scroll" >
 
+      <view class="filmView" 
+            wx:for="{{filmList}}" 
+            wx:for-item="film" 
+            wx:for-index="idx" 
+            data-page="danmu" 
+            bindtap="navigateTo" 
+            data-filmid="dddddd">
+            <view class='filmPicture'></view>
+            <view class='filmContentView'>
+                <view class='filmDetailView'>
+                    <view class='filmNameView'>
+                        <text>全球风暴</text>
+                    </view>
+                    <view class='filmTypeView'>
+                        <text>动作，惊恐，灾难</text>
+                    </view>
+                    <view class='filmDataView'>
+                        <view class='filmDataDetailView'>
+                          <view>20000</view>
+                          <view>家影厅</view>
+                        </view>
+                        <view class='filmDataDetailView'>
+                          <view>300000</view>
+                          <view><text decode='true'>人观影</text></view>
+                        </view>
+                    </view>
+                    <view class='filmDataView'>
+                        <view class='filmDataDetailView'>
+                          <view>2017-08-10</view>
+                          <view>上映</view>
+                        </view>
+                    </view>
+                </view>
+                <view class='filmScoreView'>
+                    <view class='filmScoreTextView'>
+                        <view class='filmScoreTextValueView'>8.0</view>
+                        <text class='filmScoreTextLabelView' decode='true'>&nbsp;分</text>
+                    </view>
+
+                    <view class='filmScoreTextView'>
+                          <view class='screenshotButton'>
+                              <text>图解</text>
+                          </view>
+                    </view>  
+                </view>
+            </view>
+      </view>
     </scroll-view>
 
   </view>
