@@ -19,16 +19,15 @@ page {
 }
 
 .danmuContainer .filmContainer{
-    background:rgba(0,0,0,0.0) no-repeat center fixed; 
+    background:rgba(62,62,62,0.5) no-repeat center fixed; 
     position: absolute;
     width: 100%;
-    height: 350rpx;
+    height: 370rpx;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-left: 20rpx;
-    border-bottom: 1rpx solid gray;
+    border-bottom: 0.5rpx solid gray;
     display:flex;
     flex-direction: row;
 }
@@ -38,6 +37,7 @@ page {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 20rpx;
 }
 .danmuContainer .filmContainer .filmPictureView .filmPicture{
     background-size: 100%; 
@@ -52,27 +52,26 @@ page {
     padding-left: 20rpx;
     display:flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     padding-top: 20rpx;
-
 }
 
 .danmuContainer .filmContainer .filmDetailView .filmTitleView{
     font-size: 12pt;
-    color:white;
+    color:lightgray;
     line-height: 60rpx;
     font-weight: bold;
 }
 
 .danmuContainer .filmContainer .filmDetailView .filmTypeView{
     font-size: 9pt;
-    color:white;
+    color:lightgray;
     line-height: 60rpx;
     font-weight: bold;
 }
 
 .danmuContainer .filmContainer .filmDetailView .filmDataView{
-     font-size: 9pt;
+    font-size: 9pt;
     display:flex;
     flex-direction: row;
     line-height: 60rpx;
@@ -81,62 +80,115 @@ page {
 .danmuContainer .filmContainer .filmDetailView .filmDataView .filmDataDetailView{
     display:flex;
     flex-direction: row; 
-    color: white;
+    color:lightgray;
     margin-right: 10rpx;
 }
 
-/*.firstView{
-     background:rgba(0,0,0,0.2) no-repeat center fixed; 
-    height: 100%;
-    position: relative;
+.danmuContainer .danmuShowView{
+    background:rgba(0,0,0,0.0) no-repeat center fixed; 
+    position: absolute;
     width: 100%;
+    height: 350rpx;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display:flex;
+    flex-direction: row;
 }
 
-.filmView {
-  text-align: center;
-  height: 203px;
-  width: 100%;
-  position: absolute;
-  background-size: 200%; 
-  background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: blur(10px); /* Chrome, Opera 
-  -moz-filter: blur(10px);
-  -ms-filter: blur(10px);    
-  filter: blur(10px);
+@keyframes first {
+  from {
+      right: 0;
+  }
+
+  to {
+      right: 100%;
+  }
 }
-.filmView .del_tip_word {
-  position: inherit;
-  top: 45%;
-  left: 50%;
-  margin-top: -25px;
-  margin-left: -35px;
-  color: #fff;
+.aon {
+    font-weight: bold;
+    font-size: 15pt;
+    position: absolute;
+    white-space: nowrap; /* 防止向下换行*/
 }
-.filmView .del_tip_word p {
-  font-size: 16px;
-  margin-bottom: 25px;
+
+
+.danmuContainer .danmuListView{
+    position: absolute;
+    margin-top:390rpx;
+    border-top: 0.5rpx solid lightgray;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
 }
-.filmView .del_tip_word .sure {
-  width: 50px;
-  height: 25px;
-  background: #ff4040;
-  padding: 5px 10px;
-  margin-left: -19px;
-  cursor: pointer;
+
+.danmuContainer .danmuListView .title{
+    padding-left: 20rpx;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    border-bottom: 0.5rpx solid lightgray;
+    font-size: 9pt;
 }
-.filmView .del_tip_word .cancle {
-  width: 50px;
-  height: 25px;
-  background: #bbb;
-  padding: 5px 10px;
-  margin-left: 10px;
-  cursor: pointer;
-}*/
+
+.danmuContainer .danmuListView .danmuView{
+    display:flex;
+    flex-direction: row;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx; 
+}
+
+.danmuContainer .danmuListView .danmuView .userPictureView{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15%;
+}
+
+.danmuContainer .danmuListView .danmuView .userPictureView .userPicture{
+    background-size: 100%; 
+    background-image: url('http://images.party-time.cn/upload/h5Background/59c8986f91289c750a25692a.png');
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView{
+    width: 85%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border-bottom: 0.5rpx solid lightgray;
+    padding-bottom: 20rpx;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView .userNameView{
+    font-size: 8pt;
+    color: gray;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView .userDanmuContentView{
+    font-size: 10pt;
+    margin-top: 20rpx;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView .userDanmuOperateView{
+    font-size: 9pt;
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView .userDanmuOperateView .dateView{
+    width: 40%;
+    font-size: 8pt;
+    color: lightgray;
+}
+
+.danmuContainer .danmuListView .danmuView .userDanmuView .userDanmuOperateView .praiseView{
+    width: 60%;
+    text-align: right;
+    padding-right: 20rpx;
+}
