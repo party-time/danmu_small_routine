@@ -1,256 +1,218 @@
-
-.imageContent{
-   /*padding-bottom: 10px;
-   background-color: lightgray;*/
-   padding-bottom: 12rpx;
-   border-bottom: 10rpx solid lightgray;
+page{
+   background-color: lightgray;
 }
-
-.imageContent .imageView{
+.mainContainer{
+    height: 100%;
     display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    
 }
 
-.imageContent .imageView .imageViewList{
-    flex:0;
-	  margin-bottom: -5px;
-}
-
-.imageContent .imageView .imageViewList .dialogView{
-    margin-left:100rpx;
-    padding-bottom:0px;
-    margin-top:30rpx;
-    max-width: 75px;
-    max-height: 30px;
-    font-size: 8pt;
-    position:absolute;
-    background-color: white;
-    color: black;
-    border:0.5px solid #ccc;
-    text-align: left;
-    border-radius: 2px;
-    font-family: sans-serif;
-    z-index: 1000;
-}
-
-.speech-bubble {
-    position: relative;
-    color: white;
-    text-align: center;
-    border-radius: 0px;
-    font-family: sans-serif;
-}
-
-  .speech-bubble:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid;
-    border-color:transparent ;
-}
-
-.speech-bubble-left:after {
-    border-style:solid;
-    border-right-color: white;
-    top: 50%;
-    right: 100%;
-    margin-top: -8.5px;
-}
-
-.imageView .imageViewList .imageCss{
-    border:1px solid white;
-    width: 140rpx;
-    height: 140rpx;
-}
-
-.imageView2{
-    position: absolute;
-    margin-top:110rpx;
-    z-index: 2000;
-}
-
-.imageView2 .imageCss2{
-    border:2px solid gold;
-    width: 200rpx;
-    height: 200rpx;
-    border-radius: 50%;
-}
-
-
-.titleContent{
-    width:100%;
-    border-bottom: 10rpx solid lightgray;
+.mainContainer .userPictureContainer{
     display:flex;
-    flex-direction:row;
-}
-
-.titleContent .titleView{
-    background-color: white;
-    width: 80%;
-    display:flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content:center;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 10rpx;
+    justify-content: space-between;
+    background-color: white;
+    min-height: 410rpx;
 }
 
-.titleContent .titleView .titleOtherViewList{
-    
-}
-
-
-.titleContent .titleView .titleOtherViewList .titleOtherViewLeft{
+.mainContainer .userPictureContainer .userDanmuView{
+    position: absolute;
+    width: 100%;
+    background-color:white;
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    border: 1rpx solid gold;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-right: 50rpx;
-    margin-top: 20rpx;
-    margin-bottom: 20rpx;
+
 }
 
-
-.titleContent .titleView .titleOtherViewList .titleOtherView{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50rpx;
-    margin-right: 50rpx;
-    margin-top: 20rpx;
-    margin-bottom: 20rpx;
-}
-
-.titleContent .titleView .titleOtherViewList .titleOtherViewRight{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50rpx;
-    margin-top: 20rpx;
-    margin-bottom: 20rpx;
-}
-
-
-.titleContent .titleView .titleImage{
-    
-    width: 50rpx;
-    height: 50rpx;
-}
-
-.titleContent .titleView .titleName{
-    font-size: 9pt;
-    margin-top: 10rpx;
-    
+.mainContainer .userPictureContainer .userView{
+   margin-bottom: 10rpx;
 } 
 
+.mainContainer .userPictureContainer .userView .userPictureView{
+    background-size: 100%;
+    width: 135rpx;
+    height: 135rpx;
+    border-radius: 10rpx;
+    border:1px solid white;
+} 
 
-.titleContent .titleUserView {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content:center; 
-    border-left:1rpx solid lightgray;
+.addShadow{
+    box-shadow: 0 0 30px gold; 
+    border:1px solid black;
 }
 
-.titleContent .titleUserView .titleUserViewContent{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
+.addShadow2{      
+  transform: scale(1.2);    
+  -webkit-transform:scale(1.2);
+  border:1px solid black;
+}
+
+.mainContainer .navigationView{
     margin-top: 20rpx;
-    margin-bottom: 20rpx;
-}
-
-.titleContent .titleUserView .titleImage{
-    width: 50rpx;
-    height: 50rpx;
-}
-
-.titleContent .titleUserView .titleName{
-    font-size: 9pt;
-    margin-top: 10rpx;
-}
-
-.gameContent {
-    margin-top: 20rpx;
-    width:100%;
-    border-bottom: 10rpx solid lightgray;
-}
-
-.gameContent .gameTitleview {
-   margin-left:20rpx; 
-   margin-bottom: 20rpx;
-}
-
-.gameContent .gameTitleview .tileText{
-    font-size: 12pt;
-}
-
-.gameContent .gameListView {
-    width:100%;
+    font-size: 10pt;
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.gameContent .gameListView  .big-photo-item{
+.mainContainer .navigationView .functionNavigationView{
+    padding-left: 20rpx;
+    width: 70%;
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mainContainer .navigationView .functionNavigationView .articleView{
+    width: 50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.mainContainer .navigationView .functionNavigationView .articleView .articleImageView{
+    background-size: 100%;
+    width: 80rpx;
+    height: 80rpx;
+    background-image: url('http://testimages.party-time.cn/images/wechatResource/article.gif');
+}
+
+.mainContainer .navigationView .functionNavigationView .filmView{
+    width: 50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-left: 1rpx solid lightgray;
+}
+
+.mainContainer .navigationView .functionNavigationView .filmView .filmImageView{
+    background-size: 100%;
+    width: 80rpx;
+    height: 80rpx;
+    background-image: url('http://testimages.party-time.cn/images/wechatResource/film.gif');
+}
+
+
+.mainContainer .navigationView .userNavigationView{
+    width: 30%;
+    background-color: white;
+    border-left: 1rpx solid lightgray;
     text-align: center;
-    width:160rpx;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.gameContent .gameListView  .big-photo-item .photo{
-    width:100%;
-    height: 160rpx;
-    border-radius: 10rpx;
-    background: #aaaaaa;
+.mainContainer .navigationView .userNavigationView .userImageView{
+    background-size: 100%;
+    width: 80rpx;
+    height: 80rpx;
+    background-image: url('http://testimages.party-time.cn/images/wechatResource/user.gif');
 }
 
-.gameContent .gameListView  .big-photo-item .gameName{
-    margin-top: 10rpx;
-    font-size: 9pt;
-}
 
-.filmContent {
+.mainContainer .gameContainerView{
     margin-top: 20rpx;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.mainContainer .gameContainerView .gameTitleView{
+    font-size: 10pt;
+}
+
+
+
+.mainContainer .gameListView{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+.mainContainer .gameListView .gameNavigationView{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+} 
+
+.mainContainer .gameListView .gameNavigationView .gameImageView{
     
-    width:100%;
+    background-size: 100%;
+    width: 200rpx;
+    height:300rpx;
+    border-radius: 10rpx;
+    background-image: url('http://testimages.party-time.cn/images/wechatResource/game.jpg');
+    border: 0.5rpx solid black;
+} 
+
+.mainContainer .filmContainerView{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 20rpx;
 }
 
-.filmContent .filmTitleview {
-   margin-left:20rpx; 
-   margin-bottom: 20rpx;
+.mainContainer .filmContainerView .filmTitleView{
+    font-size: 10pt;
 }
 
-.filmContent .filmTitleview .tileText{
-    font-size: 12pt;
+.mainContainer .filmContainerView .filmListView{
+    margin-top: 20rpx;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.filmContent .filmListView {
-    width:95%;
-    padding-left:10px;
-    margin-right:10px;
-}
 
-.filmContent .filmListView .scrollView {
+.mainContainer .filmContainerView .filmListView .scrollView {
     white-space:nowrap; 
     display: block;
 }
 
-.filmContent .filmListView .scrollView .filmPictureView{
+
+.mainContainer .filmContainerView .filmListView .filmNavigationView{
     display: inline-block;
     margin-right: 20rpx;
-    width: 140rpx;
-    height: 180rpx;
-    text-align: center;
 }
 
-.filmContent .filmListView .scrollView .filmPictureView .filmPicture{
-    width: 100%;
-    height: 180rpx;
+.mainContainer .filmContainerView .filmListView .filmNavigationView .filmImageView{
+    background-size: 100%;
+    width: 200rpx;
+    height:300rpx;
     border-radius: 10rpx;
+    background-image: url('http://testimages.party-time.cn/images/wechatResource/game.jpg');
+    border: 0.5rpx solid black;
 }
+
+
+
