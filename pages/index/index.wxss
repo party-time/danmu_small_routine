@@ -10,34 +10,28 @@ page{
 
 .mainContainer .userPictureContainer{
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     padding-top: 20rpx;
     padding-left: 20rpx;
     padding-right: 20rpx;
     padding-bottom: 10rpx;
-    justify-content: space-between;
     background-color: white;
     min-height: 410rpx;
 }
 
-.mainContainer .userPictureContainer .userDanmuView{
-    position: absolute;
-    width: 100%;
-    background-color:white;
-    filter:alpha(Opacity=80);
-    -moz-opacity:0.5;
-    opacity: 0.5;
-    border: 1rpx solid gold;
-    text-align: center;
-
+.mainContainer .userPictureContainer .userPictureListView{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.mainContainer .userPictureContainer .userView{
+.mainContainer .userPictureContainer .userPictureListView .userView{
    margin-bottom: 10rpx;
 } 
 
-.mainContainer .userPictureContainer .userView .userPictureView{
+.mainContainer .userPictureContainer .userPictureListView .userView .userPictureView{
     background-size: 100%;
     width: 135rpx;
     height: 135rpx;
@@ -54,6 +48,32 @@ page{
   transform: scale(1.2);    
   -webkit-transform:scale(1.2);
   border:1px solid black;
+}
+
+.mainContainer .userPictureContainer  .userDanmuView{
+    width: 92%;
+    position: absolute;
+    background-color:white;
+    /*filter:alpha(Opacity=80);
+    -moz-opacity:0.5;
+    opacity: 0.8;*/
+    border: 1rpx solid gold;
+    border-radius: 10rpx;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80rpx;
+    font-weight: bold;
+    -webkit-animation: gogogo 1s linear forwards;/*鼠标hover时，i图标旋转,infinite表示动画无限循环*/
+    animation: gogogo 1s linear forwards;   
+}
+
+.mainContainer .userPictureContainer .userDanmuView .userDanmuContentView{ 
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainContainer .navigationView{
@@ -163,8 +183,8 @@ page{
 .mainContainer .gameListView .gameNavigationView .gameImageView{
     
     background-size: 100%;
-    width: 200rpx;
-    height:300rpx;
+    width: 150rpx;
+    height:150rpx;
     border-radius: 10rpx;
     background-image: url('http://testimages.party-time.cn/images/wechatResource/game.jpg');
     border: 0.5rpx solid black;
@@ -214,5 +234,17 @@ page{
     border: 0.5rpx solid black;
 }
 
+@keyframes gogogo
+{
+  from {  
+    top: -100rpx;  
+     -webkit-transform: rotate(0deg);
+  }  
+  
+  to {  
+      top: 0rpx;  
+      -webkit-transform: rotate(0deg);
+  } 
+}
 
 

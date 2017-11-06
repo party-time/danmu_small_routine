@@ -1,10 +1,11 @@
 {
   "pages":[
+    "pages/game/game",
     "pages/index/index",
     "pages/danmu/danmu",
     "pages/film/film",
     "pages/user/user",
-    "pages/game/game",
+    
     "pages/article/article",
     "pages/logs/logs"
   ],

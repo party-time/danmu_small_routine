@@ -41,10 +41,13 @@ Page({
     }
     this.setData({ filmList: _filmArray })
 
-    for (var dm = 0; dm < 1; dm++) {
-      setTimeout(() => {
+    for (var dm = 0; dm < 200; dm++) {
+      var t = setTimeout(() => {
         var id = Math.ceil(Math.random() * 15);
-        this.setData({ show: id })
+        this.setData({ show: id });
+        setTimeout(() => {
+          this.setData({ show: 0 });
+        },2000);
       }, dm * 5000);
     }
 

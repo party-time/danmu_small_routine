@@ -1,11 +1,19 @@
 <view class='mainContainer'>
     <view class='userPictureContainer'>
-        <view class="userView" wx:for="{{userList}}" wx:for-item="items"  wx:for-index="idx" wx:key="unique">
-              <view wx:if="{{items.id!=show}}" class='userPictureView' style="background-image: url('{{items.userImage}}')"></view>
-              <view wx:if="{{items.id==show}}" class='userPictureView addShadow addShadow2' style="background-image: url('{{items.userImage}}')"></view>
-        </view>
-    </view>
 
+        <view class='userPictureListView'>
+          <view class="userView" wx:for="{{userList}}" wx:for-item="items"  wx:for-index="idx" wx:key="unique">
+            <view wx:if="{{items.id!=show}}" class='userPictureView' style="background-image: url('{{items.userImage}}')"></view>
+            <view wx:if="{{items.id==show}}" class='userPictureView addShadow addShadow2' style="background-image: url('{{items.userImage}}')"></view>
+          </view>
+        </view>
+        <view class='userDanmuView' wx:if="{{show!=0}}">
+            <view class='userDanmuContentView'>
+                <text>李二牛说:给我发弹幕</text>
+            </view>
+        </view> 
+    </view>
+    
     <view class='navigationView'>
         <view class='functionNavigationView'>
             <view class='articleView' data-page="article" bindtap="navigateTo">

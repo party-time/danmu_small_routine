@@ -3,3 +3,111 @@
 .modelContent{
   font-size: 10pt;
 }
+
+.box {
+    position: relative;
+    margin-top: 50px;
+    height: 200px;
+}
+.test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    font:14px/50px Microsoft YaHei;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    
+    background-color: #eb5C7e;
+    -webkit-animation: gogogo 1s linear forwards;/*鼠标hover时，i图标旋转,infinite表示动画无限循环*/
+    animation: gogogo 1s linear forwards;   
+    /*animation-name: gogogo;
+    animation-duration: 1s ;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;*/
+}
+@keyframes gogogo
+{
+  from {  
+    top: 0;  
+     -webkit-transform: rotate(0deg);
+  }  
+  
+  to {  
+      top: 100px;  
+      -webkit-transform: rotate(0deg);
+  } 
+  /*0% { 
+      background-color: #eb5C7e;
+      -webkit-transform: rotate(0);
+  }
+  100%{ 
+        background-color: #eb5C7e;
+        -webkit-transform: rotate(0);
+  }*/
+    
+}
+/*@-webkit-keyframes gogogo
+{
+    0% { 
+        background-color: #eb5C7e;
+        -webkit-transform: rotate(0);
+    }
+    10% {
+        background-color: #eb5C7e;
+        -webkit-transform: rotate(0);    
+    }
+    30%{
+        background-color: #1b9e55;
+        left: 0; 
+        -webkit-transform: rotate(30deg);        
+    }
+    50%{
+        left: 400px;
+        background-color: #2a7df8;
+        -webkit-transform: rotate(0);
+    }
+    70%{
+        left: 400px;
+        background-color: #2a7df8;
+        -webkit-transform: rotate(0);
+    }    
+    100%{ 
+        left:0;
+        background-color: #eb5C7e;
+        -webkit-transform: rotate(-360deg);
+    }
+}
+@keyframes gogogo
+{
+    0% { 
+        background-color: #eb5C7e;
+        transform: rotate(0);    
+    }
+    10% {
+        background-color: #eb5C7e;
+        transform: rotate(0);    
+    }
+    30%{
+        background-color: #1b9e55;
+        left: 0; 
+        transform: rotate(30deg);        
+    }
+    50%{
+        left: 400px;
+        background-color: #2a7df8;
+        transform: rotate(0);
+    }
+    70%{
+        left: 400px;
+        background-color: #2a7df8;
+        transform: rotate(0);
+    }    
+    100%{ 
+        left:0;
+        background-color: #eb5C7e;
+        transform: rotate(-360deg);
+    }
+}*/
