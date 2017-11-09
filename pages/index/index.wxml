@@ -1,6 +1,6 @@
+<import src="../../template/index.wxml"/>
 <view class='mainContainer'>
     <view class='userPictureContainer'>
-
         <view class='userPictureListView'>
           <view class="userView" wx:for="{{userList}}" wx:for-item="items"  wx:for-index="idx" wx:key="unique">
             <view wx:if="{{items.id!=show}}" class='userPictureView' style="background-image: url('{{items.userImage}}')"></view>
@@ -13,42 +13,7 @@
             </view>
         </view> 
     </view>
-    
-    <view class='navigationView'>
-        <view class='functionNavigationView'>
-            <view class='articleView' data-page="article" bindtap="navigateTo">
-                <view class='articleImageView'></view>
-            </view>
-            <view class='filmView' data-page="film" bindtap="navigateTo">
-                <view class='filmImageView'></view>
-            </view>
-        </view>
-        <view class='userNavigationView' data-page="user" bindtap="navigateTo">
-            <view class='userImageView'></view>
-        </view>
-    </view>
-
-    <view class='gameContainerView'>
-        <view class='gameTitleView'>
-          <text>游戏</text>
-        </view>
-        <view class='gameListView'>
-            <view wx:for="{{gameList}}" class='gameNavigationView' wx:key="unique">
-                <view class='gameImageView'></view>
-            </view>
-        </view>
-    </view>
-
-    <view class='filmContainerView'>
-        <view class='filmTitleView'>
-          <text>看过的电影</text>
-        </view>
-        <view class='filmListView'>
-            <scroll-view class='scrollView' scroll-x="true"  scroll-with-animation="true">
-                <view wx:for="{{filmList}}" class='filmNavigationView' wx:key="unique">
-                    <view class='filmImageView' ></view>
-                </view>
-            </scroll-view>
-        </view>
-    </view>
+    <!-- <template is="navigationTemplate"/> -->
+    <template is="gameTemplate" data="{{gameList}}"/>
+    <template is="filmTemplate" data="{{filmList}}"/>
 </view>

@@ -10,10 +10,20 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        //console.log('============'+res);
+        var code = res.code;
 
+        var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=‘appid+’&secret=‘+secret+’&grant_type=authorization_code&js_code=' + code;
+        wx.request({
+          url: url,
+          header: {'content-type': 'application/json'},
+          success: function (res) {
+            console.log(res.data.openid) //获取openid  
+          }
+        })
       }
     })
-    // 获取用户信息
+    console.log('获取用户信息');
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {

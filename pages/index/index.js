@@ -11,6 +11,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    console.log(app.globalData);
     var _userArray = [];
     for(var i=0; i<15; i++){
         var userObject  = {};
@@ -47,8 +49,8 @@ Page({
         this.setData({ show: id });
         setTimeout(() => {
           this.setData({ show: 0 });
-        },2000);
-      }, dm * 5000);
+        },6000);
+      }, dm * 10000);
     }
 
     

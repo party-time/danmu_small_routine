@@ -96,34 +96,46 @@ page{
 .mainContainer .navigationView .functionNavigationView .articleView{
     width: 50%;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding-top: 20rpx;
     padding-bottom: 20rpx;
+    align-items: center;
 }
 
 .mainContainer .navigationView .functionNavigationView .articleView .articleImageView{
     background-size: 100%;
-    width: 80rpx;
-    height: 80rpx;
+    width: 50rpx;
+    height: 50rpx;
     background-image: url('http://testimages.party-time.cn/images/wechatResource/article.gif');
+}
+
+.mainContainer .navigationView .functionNavigationView .articleView .articleTitle{
+    margin-top: 20rpx;
+    font-size: 8pt;
 }
 
 .mainContainer .navigationView .functionNavigationView .filmView{
     width: 50%;
     display:flex;
-    flex-direction: row;
+    flex-direction:column;
     justify-content: center;
     padding-top: 20rpx;
     padding-bottom: 20rpx;
     border-left: 1rpx solid lightgray;
+    align-items: center;
 }
 
 .mainContainer .navigationView .functionNavigationView .filmView .filmImageView{
     background-size: 100%;
-    width: 80rpx;
-    height: 80rpx;
+    width: 50rpx;
+    height: 50rpx;
     background-image: url('http://testimages.party-time.cn/images/wechatResource/film.gif');
+}
+
+.mainContainer .navigationView .functionNavigationView .filmView .filmTitle{
+    margin-top: 20rpx;
+    font-size: 8pt;
 }
 
 
@@ -135,15 +147,21 @@ page{
     padding-top: 20rpx;
     padding-bottom: 20rpx;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .mainContainer .navigationView .userNavigationView .userImageView{
     background-size: 100%;
-    width: 80rpx;
-    height: 80rpx;
+    width: 50rpx;
+    height: 50rpx;
     background-image: url('http://testimages.party-time.cn/images/wechatResource/user.gif');
+}
+
+.mainContainer .navigationView .userNavigationView .userTitle{
+    margin-top: 20rpx;
+    font-size: 8pt;
 }
 
 
@@ -228,7 +246,7 @@ page{
 .mainContainer .filmContainerView .filmListView .filmNavigationView .filmImageView{
     background-size: 100%;
     width: 200rpx;
-    height:300rpx;
+    height:250rpx;
     border-radius: 10rpx;
     background-image: url('http://testimages.party-time.cn/images/wechatResource/game.jpg');
     border: 0.5rpx solid black;
